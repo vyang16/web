@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<script src="script.js"></script>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fruit Shop</title>
+  </head>
+  <body>
+    <h1>This is a fruit shop</h1>
+    <h2>Please submit your order:</h2>
+
+    <!-- A bordered table for item orders -->
+
+      <table border = "border">
+
+<!-- First, the column headings -->
+
+        <tr>
+          <th> Product Name </th>
+          <th> Price </th>
+          <th> Quantity </th>
+        </tr>
+
+<!-- Now, the table data entries -->
+
+        <tr>
+          <th>Apple</th>
+          <td> 69ct </td>
+          <td> <input type = "text"  id = "apple"
+                      size ="2" /> </td>
+        </tr>
+        <tr>
+          <th> Banana </th>
+          <td> 39ct </td>
+          <td> <input type = "text"  id = "banana"
+                size = "2" /> </td>
+        </tr>
+        <tr>
+          <th> Orange </th>
+          <td> 59ct </td>
+          <td> <input type = "text"  id = "orange"
+                size = "2" /></td>
+        </tr>
+      </table>
+
+      <!-- Create button for cost calculation -->
+      <p>
+        <input type = "button"  value = "Total Cost"
+               onclick = "test();" />
+        <input type = "text"  size = "5"  id = "cost"
+               onfocus = "this.blur();" />
+      </p>
+
+      <!-- Create button for submission-->
+      <p>
+        <input type = "button"  value = "Submission"
+               onclick = "test();" />
+      </p>
+
+
+
+  </body>
+</html>
