@@ -1,62 +1,90 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 
 <html xmlns = "http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="image/fruit_bowl-512.png">
     <title>Fruit Shop</title>
   </head>
+
   <body>
-    <h1>This is a fruit shop</h1>
-    <h2>Please submit your order:</h2>
 
-<!-- First, the column headings -->
 
-      <form action="server.php">
-        <table border = "border">
+  <div id="mySidenav" class="sidenav">
+    <img src="image/the_fruit_shop.png" id="fsimage">
+    <ul class="nav">
+      <li> <a href="#">About</a> </li>
+      <li> <a href="#">Services</a> </li>
+      <li> <a href="#">Locations</a> </li>
+      <li> <a href="#">Contact</a>  </li>
+    </ul>
+  </div>
 
+
+  <h1> Welcome to the Fruit Shop </h1>
+
+  <div class="paragraph"> Dear customer, let's get some fruits for a healthier lifestyle! </div>
+  <form action="http://155.69.100.36/ts1u35/as2/server.php" name= "oder" id= "order" method="post" onsubmit="return validateForm()" method="post">
+
+    <div class="product">
+      <table class="pure-table">
         <tr>
-          <th> Product Name </th>
-          <th> Price </th>
-          <th> Quantity </th>
+          <th></th>
+          <th> Product </th>
+          <th> Price per piece </th>
+          <th align="center">Quantity</th>
         </tr>
         <tr>
-          <th>Apple</th>
-          <td> 69ct </td>
-          <td> <input type = "text"  id = "apple"
-                      size ="2"  value = "0" onchange="checkValid(this.value, this.id);"/> </td>
+          <td align="center"><img src="image/apple.jpg" height = 100 width = 100></td>
+          <td>Apple</td>
+          <td>$0.69</td>
+          <td>
+            <input type="text" name="apple" id="apple" value="0" onchange="checkValid(this.value, this.id);" size = "2">
+          </td>
         </tr>
         <tr>
-          <th> Banana </th>
-          <td> 39ct </td>
-          <td> <input type = "text"  id = "banana"
-                size = "2" value = "0" onchange="checkValid(this.value, this.id);"/> </td>
+          <td align="center"><img src ="image/banana.jpg" height = 100 width = 100></td>
+          <td>Banana</td>
+          <td>$0.39</td>
+          <td>
+            <input type="text" name="banana" id="banana" value="0" onchange="checkValid(this.value, this.id);" size = "2">
+          </td>
         </tr>
         <tr>
-          <th> Orange </th>
-          <td> 59ct </td>
-          <td> <input type = "text"  id = "orange"
-                size = "2" value = "0" onchange = "checkValid(this.value, this.id);"/></td>
+          <td align="center"><img src="image/orange.jpg" height = 100 width = 100></td>
+          <td>Orange </td>
+          <td>$0.59</td>
+          <td>
+            <input type="text" name="orange" id="orange" value="0" onchange="checkValid(this.value, this.id);" size = "2">
+          </td>
         </tr>
       </table>
+    </div>
 
-      <!-- Create button for cost calculation -->
-      <p>
-        <input type = "button"  value = "Total Cost"
-               onclick = "computeCost();" />
-        <input type = "text"  size = "5"  id = "cost"
-               onfocus = "this.blur();" />
-      </p>
+    <div class="total-cost" align="center">
+    Total Cost $<input type="text"  size ="5"  id ="cost" onfocus ="this.blur();" placeholder="NaN" /> <br>
+    </div>
+    <div class="information">
+      <p>Please put in your information. </p>
+      <div class="basic">
+        Your Name: <br>
+        <input type="text" name="name" id="name" placeholder="First Name Last Name">
+      </div>
+      <div class="basic">
+        Your Payment Method: <br>
+        <ul>
+          <li><input type="radio" name="payment" value="Visa" id="r1"> <label for="r1"> Visa <img src="image/visa.png" width = "40px"></label></li>
+          <li><input type="radio" name="payment" value="Mastercard" id="r2"> <label for="r2">Mastercard <img src="image/mastercard.png" width = "40px"> </label></li>
+          <li><input type="radio" name="payment" value="Discover" id="r3"> <label for="r3">Discover <img src="image/discover.png" width="40px"> </label></li>
+        </ul>
 
-      <!-- Create button for submission-->
-      <p>
-        <input type = "submit"  value = "Submission"
-               onclick = "computeCost();" />
-      </p>
-
-    </form>
-
+      </div>
+      <input type="submit" value="Submit" form="order">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
 
   </body>
 </html>

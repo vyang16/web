@@ -1,4 +1,101 @@
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+h1 {
+  background-image: url("image/blog-featured_fruit.jpg");
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  color: white;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+
+
 body {
-    font-family: Gill Sans Extrabold, sans-serif;
-    color:  #34495e;
+    margin: 0;
+    padding-left: 300px;
+    padding-bottom: 100px;
+    padding-top: 0px;
+}
+
+table {
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table tr {
+    border-bottom: 2px solid black;
+}
+table tr:last-child {
+    border-bottom: none;
+}
+th, td{
+  padding: 15px;
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.nav{
+  line-height: 1.8;
+  padding-left: 50px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+#fsimage{
+  padding-left: 50px;
+  width: 200px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #2dd2a9	;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  font-size: 20px;
+}
+
+.product{
+  padding-bottom: 10px;
+  background-color: #d6f5ed;
+}
+.total-cost{
+  padding-top: 30px;
+  border-top: solid 2px;
+  padding-left: 30px;
+}
+.information{
+  padding-left: 30px;
+}
+.paragraph{
+  text-align: center;
+  font-style: italic;
+  margin: 30px;
+}
+
+.basic{
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
